@@ -1,0 +1,61 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node src/index.js",
+    "dev": "nodemon src/index.js",
+    "lint": "eslint ./",
+    "test": "mocha"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "awilix": "4.2.6",
+    "axios": "0.19.2",
+    "bcryptjs": "2.4.3",
+    "body-parser": "1.19.0",
+    "cookie-parser": "1.4.5",
+    "cross-env": "7.0.2",
+    "dotenv-safe": "8.2.0",
+    "express": "4.17.1",
+    "express-validation": "3.0.5",
+    "helmet": "3.22.0",
+    "http-status": "1.4.2",
+    "joi-objectid": "3.0.1",
+    "jwt-simple": "0.5.6",
+    "lodash": "4.17.15",
+    "moment-timezone": "0.5.31",
+    "mongoose": "5.9.17",
+    "morgan": "1.10.0",
+    "passport": "0.4.1",
+    "passport-http-bearer": "1.0.1",
+    "passport-jwt": "4.0.0",
+    "pino": "6.4.1",
+    "uuid": "8.1.0"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-plugin-import": "2.20.2",
+    "husky": "4.2.5",
+    "lint-staged": "10.2.7",
+    "mocha": "8.0.1",
+    "nodemon": "2.0.4",
+    "sinon": "9.0.2",
+    "supertest": "4.0.2"
+  }
+}

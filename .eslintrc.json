@@ -1,0 +1,21 @@
+{
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "extends": ["eslint:recommended", "airbnb-base"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 11
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "arrow-parens": ["error", "as-needed", { "requireForBlockBody": true }],
+    "no-use-before-define": ["error", "nofunc"]
+  }
+}

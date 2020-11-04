@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  proj-api:
+    image: docker/project1:latest
+    environment:
+      - PORT=3000
+      - JWT_SECRET=adf123
+      - JWT_EXPIRATION_MINUTES=1440
+      - MONGO_URI=mongodb://mongodb:27017/db
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
